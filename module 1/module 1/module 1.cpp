@@ -64,6 +64,7 @@ void deleteTask(std::vector<Task>& tasks, size_t index)
 }
 void showPersonalCabinet(const std::vector<Task>& tasks)
 {
+	setRussianLocale();
 	size_t completedCount = 0;
 	size_t failedCount = 0;
 	std::chrono::duration<double, std::ratio<3600>> completedDuration{ 0 };
@@ -134,7 +135,7 @@ int main()
 
 			std::tm deadline;
 			std::cout << "Введите дату и время сдачи в формате ДД.ММ.ГГГГ ЧЧ:ММ:СС: ";
-			std::cin >> std::get_time(&deadline, "%d.%m.%Y %H:%M:%S"); // мб очищать буфер?
+			// мб очищать буфер?
 			if (!(std::cin >> std::get_time(&deadline, "%d.%m.%Y %H:%M:%S"))) {
 				std::cout << "Неправильный ввод даты и времени!" << std::endl;
 				break;
@@ -171,12 +172,20 @@ int main()
 		}
 		case 4:
 		{
-			size_t index;
-			std::cout << "Введите номер задания: ";
-			std::cin >> index;
-			--index;
-			deleteTask(tasks, index);
-			break;
+			if (tasks.size() == 0)
+			{
+				std::cout << "Активных заданий нет! Создайте хотя бы одно." << std::endl;
+				break;
+			}
+			else
+			{
+				size_t index;
+				std::cout << "Введите номер задания: ";
+				std::cin >> index;
+				--index;
+				deleteTask(tasks, index);
+				break;
+			}
 		}
 		case 5:
 		{
