@@ -67,14 +67,11 @@ void showPersonalCabinet(const std::vector<Task>& tasks)
 	setRussianLocale();
 	size_t completedCount = 0;
 	size_t failedCount = 0;
-	std::chrono::duration<double, std::ratio<3600>> completedDuration{ 0 };
-
 	for (const auto& task : tasks)
 	{
 		if (task.isCompleted)
 		{
 			++completedCount;
-			completedDuration += task.deadline - task.startTime;
 		}
 		else if (task.deadline < std::chrono::system_clock::now())
 		{
@@ -85,11 +82,6 @@ void showPersonalCabinet(const std::vector<Task>& tasks)
 	std::cout << "Личный кабинет:" << std::endl;
 	std::cout << "Выполнено заданий: " << completedCount << std::endl;
 	std::cout << "Провалено заданий: " << failedCount << std::endl;
-	if (completedCount > 0)
-	{
-		std::cout << "Среднее время выполнения: " << completedDuration.count() / completedCount << " часа(ов)" << std::endl;
-		std::cout << "Процент выполненных заданий: " << completedCount * 100 / tasks.size() << "%" << std::endl;
-	}
 }
 void drawMenu()
 {
