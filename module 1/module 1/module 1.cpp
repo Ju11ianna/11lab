@@ -4,8 +4,8 @@
 #include <chrono>
 #include <iomanip>
 #include <algorithm>
-
 #include <Windows.h>
+#pragma execution_character_set("unicode")
 
 void setRussianLocale()
 {
@@ -88,13 +88,12 @@ void drawMenu()
 	std::cout << "┌─────────────────────────┐" << std::endl;
 	std::cout << "│ 1. Создать задание      │" << std::endl;
 	std::cout << "│ 2. Просмотреть задания  │" << std::endl;
-	std::cout << "│ 3. Выполнить задание    │" << std::endl;
+	std::cout << "│ 3. Завершить задание    │" << std::endl;
 	std::cout << "│ 4. Удалить задание      │" << std::endl;
-	std::cout << "│ 5. Личный кабинет       │" << std::endl;
+	std::cout << "│ 5. Профиль              │" << std::endl;
 	std::cout << "│ 6. Выход                │" << std::endl;
 	std::cout << "└─────────────────────────┘" << std::endl;
 	std::cout << std::endl;
-	std::cout << "Выберите действие: ";
 }
 int main()
 {
@@ -126,7 +125,7 @@ int main()
 			std::getline(std::cin, name);
 
 			std::tm deadline;
-			std::cout << "Введите дату и время сдачи в формате ДД.ММ.ГГГГ ЧЧ:ММ:СС: ";
+			std::cout << "Введите дату и время завершения в формате ДД.ММ.ГГГГ ЧЧ:ММ:СС: ";
 			// мб очищать буфер?
 			if (!(std::cin >> std::get_time(&deadline, "%d.%m.%Y %H:%M:%S"))) {
 				std::cout << "Неправильный ввод даты и времени!" << std::endl;

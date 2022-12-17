@@ -1,4 +1,5 @@
 ﻿  module 1.cpp
+C:\Users\Yaroslav\Desktop\Лабы\трпо\12\module-1-12lab\module 1\module 1\module 1.cpp(8,9): warning C4695: #pragma кодировка_выполнения: "unicode" не является поддерживаемым аргументом: в настоящее время поддерживается только кодировка "UTF-8"
 C:\Users\Yaroslav\Desktop\Лабы\трпо\12\module-1-12lab\module 1\module 1\module 1.cpp(88,15): warning C4566: символ, представленный универсальным именем символа "\u250C", невозможно представить в текущей кодовой странице (1251)
 C:\Users\Yaroslav\Desktop\Лабы\трпо\12\module-1-12lab\module 1\module 1\module 1.cpp(88,15): warning C4566: символ, представленный универсальным именем символа "\u2500", невозможно представить в текущей кодовой странице (1251)
 C:\Users\Yaroslav\Desktop\Лабы\трпо\12\module-1-12lab\module 1\module 1\module 1.cpp(88,15): warning C4566: символ, представленный универсальным именем символа "\u2510", невозможно представить в текущей кодовой странице (1251)
