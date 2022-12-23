@@ -1,0 +1,97 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    while(true)
+    {
+        cout << "Please choose one of the modules below:" << endl;
+        cout << "1. Module 1" << endl;
+        cout << "2. Module 2" << endl;
+        cout << "3. Module 3" << endl;
+        cout << "4. Module 4" << endl;
+        cout << "5. Exit" << endl;
+
+        int choice;
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                cout << "Module 1 selected" << endl;
+                // Code for Module 1
+                break;
+            case 2:
+                cout << "Module 2 selected" << endl;
+                // Code for Module 2
+                break;
+            case 3:
+                cout << "Module 3 selected" << endl;
+                // Code for Module 3
+                break;
+            case 4:
+                cout << "Module 4 selected" << endl;
+                // Code for Module 4
+                break;
+            case 5:
+                cout << "Exiting..." << endl;
+                return 0;
+            default:
+                cout << "Invalid input, please try again." << endl;
+                break;
+        }
+    }
+    return 0;
+}
+При вводе неправильных данных бесконечно выводится меню, как исправить?
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int choice;
+    do
+    {
+        cout << "Please choose one of the modules below:" << endl;
+        cout << "1. Module 1" << endl;
+        cout << "2. Module 2" << endl;
+        cout << "3. Module 3" << endl;
+        cout << "4. Module 4" << endl;
+        cout << "5. Exit" << endl;
+
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                cout << "Module 1 selected" << endl;
+                // Code for Module 1
+                break;
+            case 2:
+                cout << "Module 2 selected" << endl;
+                // Code for Module 2
+                break;
+            case 3:
+                cout << "Module 3 selected" << endl;
+                // Code for Module 3
+                break;
+            case 4:
+                cout << "Module 4 selected" << endl;
+                // Code for Module 4
+                break;
+            case 5:
+                cout << "Exiting..." << endl;
+                return 0;
+            default:
+                cout << "Invalid input, please try again." << endl;
+                break;
+        }
+    } while (choice != 5);
+
+    return 0;
+}
