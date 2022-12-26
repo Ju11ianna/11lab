@@ -1,1 +1,2 @@
 C:\Users\elena\Desktop\OnTime_project\Project1\x64\Debug\Project1.exe
+C:\Users\elena\Desktop\OnTime_project\OnTime_messages\x64\Debug\OnTime_Messages.exe
