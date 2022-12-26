@@ -1,0 +1,10 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include <vector>
+#include <chrono>
+#include <iomanip>
+#include <algorithm>
+#include <Windows.h>
+#pragma execution_character_set("unicode")
+void module1();
